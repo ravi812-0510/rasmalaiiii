@@ -233,57 +233,26 @@ You are my forever favourite 💗
 
 
 <script>
-.openGift{
-    animation:openBox 1s forwards;
-}
-
-@keyframes openBox{
-    0%{
-        transform:rotate(0deg) scale(1);
-    }
-    50%{
-        transform:rotate(-15deg) scale(1.2);
-    }
-    100%{
-        transform:rotate(0de
-
 function openPage(){
 
 document.getElementById("open").style.display="none";
-
 document.getElementById("main").style.display="block";
 
 }
 
 
-
 function gift(){
 
-document.getElementById("gift").style.display="block";
+let box = document.getElementById("giftBox");
+
+box.innerHTML="💝";
+
+document.getElementById("giftMessage").style.display="block";
 
 }
 
 
-
-// Change this date to your starting date
-let startDate=new Date("2025-08-16");
-
-
-setInterval(()=>{
-
-let now=new Date();
-
-let diff=now-startDate;
-
-let days=Math.floor(diff/(1000*60*60*24));
-
-document.getElementById("timer").innerHTML=
-"Our Love Journey ❤️<br>"+days+" Days Together 💗";
-
-},1000);
-
-
-
+// Floating hearts
 setInterval(()=>{
 
 let heart=document.createElement("div");
@@ -305,9 +274,7 @@ heart.remove();
 
 },6000);
 
-
 },500);
-
 
 </script>
 
