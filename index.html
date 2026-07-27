@@ -4,147 +4,134 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>My Rasmalaiiiii 💗</title>
+<title>For My Rasmalaiiiii 💗</title>
 
 <style>
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Arial',sans-serif;
+font-family:Arial,sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#fff5fa,#ffd6e8);
+background:linear-gradient(#fff5fa,#ffd9ea);
 color:#ff4f9a;
+text-align:center;
 overflow-x:hidden;
 }
 
-/* Opening */
 .open{
 height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
 flex-direction:column;
-text-align:center;
 }
 
 .open h1{
-font-size:45px;
-animation:pulse 2s infinite;
+font-size:42px;
+animation:zoom 2s infinite;
 }
 
 .open p{
 font-size:20px;
-color:#777;
+color:#666;
 margin:20px;
 }
 
 button{
 background:#ff5fa2;
 border:none;
-color:white;
 padding:15px 35px;
-border-radius:50px;
+border-radius:30px;
+color:white;
 font-size:18px;
-box-shadow:0 5px 15px #ffb6d5;
 cursor:pointer;
 }
 
 
-@keyframes pulse{
-50%{
-transform:scale(1.1);
-}
+@keyframes zoom{
+50%{transform:scale(1.08);}
 }
 
-
-/* Main */
 
 .main{
 display:none;
 padding:25px;
-text-align:center;
 }
 
 
 h2{
-font-size:40px;
-margin-top:20px;
+font-size:38px;
+}
+
+
+.box{
+margin:30px auto;
+font-size:90px;
+cursor:pointer;
+animation:bounce 1.5s infinite;
+}
+
+
+@keyframes bounce{
+50%{transform:translateY(-15px);}
 }
 
 
 .card{
-
 background:white;
-border-radius:30px;
 padding:30px;
-margin:30px auto;
+border-radius:25px;
+margin:25px auto;
 max-width:500px;
-box-shadow:0 0 25px #ffc1dc;
+box-shadow:0 0 20px #ffc0da;
 font-size:18px;
 line-height:1.7;
-
 }
 
 
-.couple{
-
-font-size:70px;
+.timer{
+background:white;
+padding:20px;
+border-radius:20px;
 margin:20px;
-
+font-size:22px;
 }
 
 
-.memory{
-
+.photo{
 height:250px;
-max-width:350px;
-margin:20px auto;
 background:#ffe4f0;
 border-radius:25px;
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:20px;
-
+margin:25px auto;
+max-width:350px;
 }
 
 
-.surprise{
-
+.hidden{
 display:none;
-margin-top:25px;
-font-size:25px;
+font-size:24px;
+margin-top:20px;
 }
 
-
-/* Hearts */
 
 .heart{
-
 position:fixed;
 bottom:-20px;
-animation:heart 6s linear infinite;
 color:#ff7eb7;
-
+animation:fly 6s linear;
 }
 
-
-@keyframes heart{
-
-from{
-transform:translateY(0);
-opacity:1;
-}
-
+@keyframes fly{
 to{
 transform:translateY(-100vh);
 opacity:0;
 }
-
 }
 
 </style>
@@ -160,11 +147,11 @@ opacity:0;
 <h1>Hey Rasmalaiiiii 🍬💗</h1>
 
 <p>
-Your Sweetuu made something special for you ❤️
+Your Sweetuu created something special for you ❤️
 </p>
 
-<button onclick="start()">
-Open My Love Letter 💌
+<button onclick="openPage()">
+Open My Love 💌
 </button>
 
 </div>
@@ -173,18 +160,20 @@ Open My Love Letter 💌
 
 <div class="main" id="main">
 
-<div class="couple">
-🐱💗🐱
+
+<div class="box" onclick="gift()">
+🎁
 </div>
+
+<p>Tap the gift box 💗</p>
 
 
 <h2>
 Happy Girlfriend's Day ❤️
 </h2>
 
-
 <h3>
-For My Beautiful Rasmalaiiiii 🍬
+My Beautiful Rasmalaiiiii 🍬
 </h3>
 
 
@@ -195,19 +184,16 @@ Dear Rasmalaiiiii ❤️
 
 <br><br>
 
-You are the sweetest part of my life.
-Your smile is my favourite thing,
-your happiness is my priority,
-and your love is my biggest gift.
+You are my favourite person,
+my happiest place and my sweetest memory.
 
-<br><br>
-
-No matter what happens,
-you will always be my special person.
+Your smile makes everything better.
+Thank you for being in my life.
 
 <br><br>
 
 Forever yours,
+
 <br>
 
 <strong>Your Sweetuu 💗</strong>
@@ -216,40 +202,36 @@ Forever yours,
 
 
 
-<div class="memory">
-
-📸 Our Beautiful Memories
-
+<div class="timer" id="timer">
+Our Love Time ❤️
 </div>
 
 
 
-<button onclick="surprise()">
-
-Click For Surprise 💝
-
-</button>
+<div class="photo">
+📸 Add Our Photos Here
+</div>
 
 
-<div class="surprise" id="surprise">
+
+<div class="hidden" id="gift">
 
 I Love You Rasmalaiiiii ❤️
 
 <br>
 
-You are my favourite chapter of my life 💗
+You are my forever favourite 💗
 
 </div>
 
 
 </div>
-
 
 
 <script>
 
 
-function start(){
+function openPage(){
 
 document.getElementById("open").style.display="none";
 
@@ -259,37 +241,56 @@ document.getElementById("main").style.display="block";
 
 
 
-function surprise(){
+function gift(){
 
-document.getElementById("surprise").style.display="block";
+document.getElementById("gift").style.display="block";
 
 }
 
 
 
+// Change this date to your starting date
+let startDate=new Date("2025-08-16");
+
+
 setInterval(()=>{
 
-let h=document.createElement("div");
+let now=new Date();
 
-h.className="heart";
+let diff=now-startDate;
 
-h.innerHTML="❤️";
+let days=Math.floor(diff/(1000*60*60*24));
 
-h.style.left=Math.random()*100+"%";
+document.getElementById("timer").innerHTML=
+"Our Love Journey ❤️<br>"+days+" Days Together 💗";
 
-h.style.fontSize=Math.random()*25+15+"px";
+},1000);
 
-document.body.appendChild(h);
+
+
+setInterval(()=>{
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"%";
+
+heart.style.fontSize=(15+Math.random()*25)+"px";
+
+document.body.appendChild(heart);
 
 
 setTimeout(()=>{
 
-h.remove();
+heart.remove();
 
 },6000);
 
 
-},400);
+},500);
 
 
 </script>
