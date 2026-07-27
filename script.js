@@ -20,3 +20,18 @@ From your Sweetuu 💕`
 xg) scale(1);
     }
 }
+function gift(){
+
+let box = document.getElementById("giftBox");
+
+box.classList.add("openGift");
+
+setTimeout(function(){
+
+box.innerHTML="💝";
+
+document.getElementById("giftMessage").style.display="block";
+
+},800);
+
+}
