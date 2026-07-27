@@ -123,17 +123,13 @@ transition:.3s;
 transform:translateY(-8px);
 }
 .openGift{
-    animation:openBox 1s forwards;
+    animation: shake 0.8s;
 }
 
-@keyframes openBox{
-    0%{
-        transform:rotate(0deg) scale(1);
-    }
-    50%{
-        transform:rotate(-15deg) scale(1.2);
-    }
-    100%{
-        transform:rotate(0deg) scale(1);
-    }
+@keyframes shake{
+    0%{transform:rotate(0);}
+    25%{transform:rotate(-15deg);}
+    50%{transform:rotate(15deg);}
+    75%{transform:rotate(-10deg);}
+    100%{transform:rotate(0);}
 }
