@@ -161,17 +161,12 @@ Open My Love 💌
 <div class="main" id="main">
 
 
-<div class="box" id="giftBox" onclick="gift()">
+<div class="box" onclick="gift(this)">
 🎁
 </div>
 
 <p>Tap the gift box 💗</p>
 
-<div class="hidden" id="giftMessage">
-💝 Surprise for my Rasmalaiiiii ❤️
-<br><br>
-I Love You Forever 💗
-</div>
 <h2>
 Happy Girlfriend's Day ❤️
 </h2>
@@ -233,26 +228,45 @@ You are my forever favourite 💗
 
 
 <script>
+
+
 function openPage(){
 
 document.getElementById("open").style.display="none";
+
 document.getElementById("main").style.display="block";
 
 }
 
 
+
 function gift(){
 
-let box = document.getElementById("giftBox");
-
-box.innerHTML="💝";
-
-document.getElementById("giftMessage").style.display="block";
+document.getElementById("gift").style.display="block";
 
 }
 
 
-// Floating hearts
+
+// Change this date to your starting date
+let startDate=new Date("2025-08-16");
+
+
+setInterval(()=>{
+
+let now=new Date();
+
+let diff=now-startDate;
+
+let days=Math.floor(diff/(1000*60*60*24));
+
+document.getElementById("timer").innerHTML=
+"Our Love Journey ❤️<br>"+days+" Days Together 💗";
+
+},1000);
+
+
+
 setInterval(()=>{
 
 let heart=document.createElement("div");
@@ -274,7 +288,9 @@ heart.remove();
 
 },6000);
 
+
 },500);
+
 
 </script>
 
