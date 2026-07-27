@@ -1,30 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Rasmalaiiiii 💗</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(#fff0f5,#ffffff);
+    color:#ff4f9a;
+    overflow-x:hidden;
+}
+
+.opening{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    background:#ffe6f0;
+}
+
+.opening h1{
+    font-size:35px;
+    color:#ff4f9a;
+}
+
+.opening p{
+    margin:20px;
+    font-size:20px;
+    color:#555;
+}
+
+button{
+    background:#ff4f9a;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:30px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.main{
+    display:none;
+    text-align:center;
+    padding:30px;
+}
+
+h2{
+    font-size:38px;
+    margin-top:20px;
+}
+
+.heart{
+    position:fixed;
+    bottom:-20px;
+    color:#ff8fc7;
+    animation:float 6s infinite;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0);
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-100vh);
+        opacity:0;
+    }
+}
+
+.card{
+    background:white;
+    margin:30px auto;
+    padding:25px;
+    border-radius:25px;
+    max-width:500px;
+    box-shadow:0 0 20px #ffd1e5;
+}
+
+.photo{
+    width:90%;
+    max-width:350px;
+    height:250px;
+    background:#ffe6f0;
+    border-radius:20px;
+    margin:20px auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#ff4f9a;
+}
+
+.surprise{
+    display:none;
+    font-size:22px;
+    margin-top:20px;
+    color:#ff4f9a;
+}
+</style>
+</head>
+
 <body>
 
-<div class="loader">
-    <h1>❤️</h1>
-    <p>Loading our love story...</p>
+<div class="opening" id="opening">
+    <h1>Hey Rasmalaiiiii 💗</h1>
+    <p>Your Sweetuu made something special for you ❤️</p>
+    <button onclick="openLove()">Tap Here 💕</button>
 </div>
 
-<section class="hero">
 
-    <div class="glass-card">
+<div class="main" id="main">
 
-        <h3>Happy Girlfriend's Day</h3>
+<h2>Happy Girlfriend's Day 💗</h2>
+<h3>My Beautiful Rasmalaiiiii 🍬</h3>
 
-        <h1>Sweetuu ❤️ Rasmalaiiii</h1>
+<div class="card">
+<p>
+Dear Rasmalaiiiii ❤️<br><br>
 
-        <p>
-            From the moment we met on 22 March 2025,
-            my world became brighter.
-            Every memory with you is my favorite.
-        </p>
+You are not just my girlfriend, you are my favourite person.
+Your smile makes my bad days better and your love makes my life beautiful.
+I am lucky to have you. 💗<br><br>
 
-        <button id="enterBtn">
-            Begin Our Story 💌
-        </button>
+Forever yours,<br>
+Your Sweetuu 💕
+</p>
+</div>
 
-    </div>
 
-</section>
+<div class="photo">
+📸 Add Our Memories Here
+</div>
+
+
+<button onclick="showSurprise()">Click For Surprise 💝</button>
+
+<div class="surprise" id="surprise">
+I Love You Rasmalaiiiii ❤️<br>
+You are my sweetest memory and my happiest place 💗
+</div>
+
+</div>
+
+
+<script>
+
+function openLove(){
+    document.getElementById("opening").style.display="none";
+    document.getElementById("main").style.display="block";
+}
+
+function showSurprise(){
+    document.getElementById("surprise").style.display="block";
+}
+
+
+// floating hearts
+setInterval(()=>{
+let heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"%";
+heart.style.fontSize=(15+Math.random()*25)+"px";
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+
+},500);
+
+</script>
 
 </body>
+</html>
