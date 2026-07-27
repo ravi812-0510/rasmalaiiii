@@ -17,3 +17,18 @@ From your Sweetuu 💕`
         });
     });
 }
+.openGift{
+    animation:openBox 1s forwards;
+}
+
+@keyframes openBox{
+    0%{
+        transform:rotate(0deg) scale(1);
+    }
+    50%{
+        transform:rotate(-15deg) scale(1.2);
+    }
+    100%{
+        transform:rotate(0deg) scale(1);
+    }
+}
