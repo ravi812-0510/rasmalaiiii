@@ -20,10 +20,11 @@ From your Sweetuu 💕`
 xg) scale(1);
     }
 }
-function gift(){
+function openGift(){
 
-let box = document.getElementById("giftBox");
+document.getElementById("gift").style.display="block";
 
+}
 box.classList.add("openGift");
 
 setTimeout(function(){
