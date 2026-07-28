@@ -228,69 +228,15 @@ You are my forever favourite 💗
 
 
 <script>
-
-
-function openPage(){
-
-document.getElementById("open").style.display="none";
-
-document.getElementById("main").style.display="block";
-
+function openPage() {
+    document.getElementById("open").style.display = "none";
+    document.getElementById("main").style.display = "block";
 }
 
-
-
-function gift(){
-
-document.getElementById("gift").style.display="block";
-
+function openGift() {
+    alert("Gift clicked!");
 }
-
-
-
-// Change this date to your starting date
-let startDate=new Date("2025-08-16");
-
-
-setInterval(()=>{
-
-let now=new Date();
-
-let diff=now-startDate;
-
-let days=Math.floor(diff/(1000*60*60*24));
-
-document.getElementById("timer").innerHTML=
-"Our Love Journey ❤️<br>"+days+" Days Together 💗";
-
-},1000);
-
-
-
-setInterval(()=>{
-
-let heart=document.createElement("div");
-
-heart.className="heart";
-
-heart.innerHTML="❤️";
-
-heart.style.left=Math.random()*100+"%";
-
-heart.style.fontSize=(15+Math.random()*25)+"px";
-
-document.body.appendChild(heart);
-
-
-setTimeout(()=>{
-
-heart.remove();
-
-},6000);
-
-
-},500);
-
+</script>
 
 </script>
 
