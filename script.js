@@ -20,19 +20,7 @@ From your Sweetuu 💕`
 xg) scale(1);
     }
 }
-function openGift(){
-
-document.getElementById("gift").style.display="block";
-
-}
-box.classList.add("openGift");
-
-setTimeout(function(){
-
-box.innerHTML="💝";
-
-document.getElementById("giftMessage").style.display="block";
-
-},800);
-
+function gift() {
+    document.getElementById("giftBox").innerHTML = "💖";
+    document.getElementById("gift").style.display = "block";
 }
